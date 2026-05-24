@@ -1,0 +1,463 @@
+/*
+	custom.css
+	Monash Pixel Arts Society — supplemental styles
+	Built on top of the Future Imperfect template (HTML5 UP)
+	Font change: body uses 'Nunito', headings use 'Raleway' (already in template)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+/* Override body font to Nunito for a friendlier feel */
+body,
+input,
+select,
+textarea {
+	font-family: "Nunito", "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* ----------------------------------------
+   About Stats Block
+---------------------------------------- */
+.about-stats {
+	display: flex;
+	gap: 2em;
+	margin: 1.5em 0 2em 0;
+	padding: 1.5em;
+	background: #f9f9f9;
+	border-left: 4px solid #006a6a;
+	border-radius: 4px;
+}
+
+.stat-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+
+.stat-number {
+	font-size: 2em;
+	font-weight: 700;
+	color: #006a6a;
+	font-family: "Raleway", Helvetica, sans-serif;
+	line-height: 1.2;
+}
+
+.stat-label {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: #888;
+	margin-top: 0.3em;
+}
+
+/* ----------------------------------------
+   Event Filter
+---------------------------------------- */
+.event-filter {
+	display: flex;
+	align-items: center;
+	gap: 0.45em;
+	margin: 1.5em 0 1.35em 0;
+	flex-wrap: wrap;
+	padding: 0.45em;
+	border: 1px solid rgba(0,106,106,0.16);
+	border-radius: 5px;
+	background: rgba(0,106,106,0.045);
+}
+
+.filter-btn {
+	min-height: 2.7em;
+	padding: 0 1.05em;
+	border: 1px solid transparent;
+	background: #fff;
+	color: #3c3b3b;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 0.68em;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	line-height: 2.7em;
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px rgba(160,160,160,0.18);
+	transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+	color: #006a6a;
+	box-shadow: inset 0 0 0 1px rgba(0,106,106,0.45);
+	transform: translateY(-1px);
+}
+
+.filter-btn.active {
+	background: #006a6a;
+	color: #fff;
+	box-shadow: 0 0.45em 1em rgba(0,106,106,0.18);
+	transform: none;
+}
+
+/* ----------------------------------------
+   Events List
+---------------------------------------- */
+.events-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-bottom: 2em;
+}
+
+.event-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.25em;
+	padding: 1.25em 1.5em;
+	border: 1px solid rgba(160,160,160,0.25);
+	border-radius: 5px;
+	background: #fff;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+	border-color: #006a6a;
+	box-shadow: 0 2px 12px rgba(0,106,106,0.14);
+}
+
+.event-card.hidden {
+	display: none;
+}
+
+.event-date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 3.5em;
+	background: #006a6a;
+	color: #fff;
+	border-radius: 4px;
+	padding: 0.5em 0.4em;
+}
+
+.event-day {
+	font-size: 1.5em;
+	font-weight: 700;
+	font-family: "Raleway", Helvetica, sans-serif;
+	line-height: 1;
+}
+
+.event-month {
+	font-size: 0.6em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-top: 0.25em;
+}
+
+.event-info h3 {
+	margin-bottom: 0.3em;
+	font-size: 0.85em;
+}
+
+.event-info p {
+	margin-bottom: 0.5em;
+	font-size: 0.85em;
+}
+
+.event-tag {
+	display: inline-block;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	padding: 0.2em 0.7em;
+	border-radius: 2px;
+	background: rgba(0,106,106,0.1);
+	color: #006a6a;
+	font-weight: 700;
+}
+
+/* ----------------------------------------
+   Membership Tiers
+---------------------------------------- */
+.membership-tiers {
+	display: flex;
+	gap: 1.5em;
+	margin: 1.5em 0 2em 0;
+	flex-wrap: wrap;
+}
+
+.tier-card {
+	flex: 1;
+	min-width: 220px;
+	padding: 1.75em 1.5em;
+	border: 1px solid rgba(160,160,160,0.3);
+	border-radius: 5px;
+	background: #fff;
+}
+
+.tier-card h3 {
+	font-size: 0.85em;
+	margin-bottom: 0.4em;
+	color: #3c3b3b;
+}
+
+.tier-price {
+	font-size: 1.4em;
+	font-weight: 700;
+	color: #006a6a;
+	font-family: "Raleway", Helvetica, sans-serif;
+	margin-bottom: 1em !important;
+}
+
+.tier-benefits {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tier-benefits li {
+	padding: 0.35em 0;
+	border-bottom: 1px solid rgba(160,160,160,0.15);
+	font-size: 0.85em;
+	padding-left: 1.2em;
+	position: relative;
+}
+
+.tier-benefits li::before {
+	content: "\2713";
+	position: absolute;
+	left: 0;
+	color: #006a6a;
+	font-weight: 700;
+}
+
+.tier-benefits li:last-child {
+	border-bottom: none;
+}
+
+.tier-card.tier-featured {
+	border-color: #006a6a;
+	border-width: 2px;
+	background: #f0fafa;
+}
+
+.tier-card.tier-featured h3 {
+	color: #006a6a;
+}
+
+/* ----------------------------------------
+   FAQ Section
+---------------------------------------- */
+.faq-section {
+	margin: 2em 0;
+}
+
+.faq-section > h3 {
+	font-size: 0.9em;
+	margin-bottom: 1em;
+	color: #3c3b3b;
+}
+
+.faq-item {
+	border-bottom: 1px solid rgba(160,160,160,0.25);
+}
+
+.faq-question {
+	width: 100%;
+	background: none;
+	border: none;
+	padding: 1em 0;
+	text-align: left;
+	cursor: pointer;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 0.78em;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #3c3b3b;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+	color: #006a6a;
+}
+
+.faq-icon {
+	font-size: 1.2em;
+	font-weight: 400;
+	color: #006a6a;
+	transition: transform 0.25s ease;
+	flex-shrink: 0;
+	margin-left: 1em;
+}
+
+.faq-item.open .faq-icon {
+	transform: rotate(45deg);
+}
+
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.35s ease, padding 0.25s ease;
+	padding: 0;
+}
+
+.faq-item.open .faq-answer {
+	max-height: 300px;
+	padding-bottom: 1em;
+}
+
+.faq-answer p {
+	margin-bottom: 0;
+	font-size: 0.9em;
+	color: #646464;
+}
+
+/* ----------------------------------------
+   Gallery Grid
+---------------------------------------- */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+	margin-bottom: 2em;
+}
+
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.05);
+}
+
+.gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 106, 106, 0.88);
+	color: #fff;
+	padding: 0.6em 0.8em;
+	display: flex;
+	flex-direction: column;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+	transform: translateY(0);
+}
+
+.gallery-caption strong {
+	font-size: 0.8em;
+	font-family: "Raleway", Helvetica, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.gallery-caption span {
+	font-size: 0.7em;
+	opacity: 0.9;
+}
+
+/* ----------------------------------------
+   Contact Form — Error & Success
+---------------------------------------- */
+.field-error {
+	display: block;
+	color: #e05353;
+	font-size: 0.72em;
+	margin-top: 0.3em;
+	min-height: 1em;
+}
+
+input.input-error,
+select.input-error,
+textarea.input-error {
+	border-color: #e05353 !important;
+}
+
+.form-success-msg {
+	padding: 1.2em 1.5em;
+	background: rgba(0,106,106,0.07);
+	border-left: 4px solid #006a6a;
+	border-radius: 4px;
+	margin-top: 1em;
+}
+
+.form-success-msg p {
+	margin-bottom: 0;
+	color: #006a6a;
+	font-size: 0.9em;
+}
+
+/* ----------------------------------------
+   Override main.css template accent color (#2ebaae -> #006a6a)
+   Covers: links hover, buttons, form focus, menu hover
+---------------------------------------- */
+a:hover {
+	color: #006a6a !important;
+}
+
+a:hover:before {
+	color: #006a6a !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+	box-shadow: inset 0 0 0 1px #006a6a !important;
+	color: #006a6a !important;
+}
+
+.faq-question,
+.faq-question:hover,
+.faq-question:focus {
+	box-shadow: none !important;
+	outline: none !important;
+	height: auto !important;
+	line-height: normal !important;
+	padding: 1em 0 !important;
+	font-size: 0.78em !important;
+	letter-spacing: 0.12em !important;
+	text-transform: uppercase !important;
+	white-space: normal !important;
+}
+
+.faq-question:hover {
+	color: #006a6a !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #006a6a !important;
+	box-shadow: inset 0 0 0 1px #006a6a !important;
+}
+
+input[type="checkbox"]:focus + label:before,
+input[type="radio"]:focus + label:before {
+	border-color: #006a6a !important;
+	box-shadow: 0 0 0 1px #006a6a !important;
+}
+
+#menu .links > li a:hover h3 {
+	color: #006a6a !important;
+}
